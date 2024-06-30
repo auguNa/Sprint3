@@ -1,17 +1,16 @@
-package Invoker;
+package Command;
 
-import Command.Command;
-import Receiver.Car;
+import Receiver.Vehicle;
 
 public class Accelerate implements Command {
-    Car car;
+    private Vehicle vehicle;
 
-    public Accelerate(Car newCar) {
-        car = newCar;
+    public Accelerate(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 
     @Override
     public void execute() {
-        car.accelerate();
+        vehicle.accelerate();
     }
 }

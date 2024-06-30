@@ -2,15 +2,33 @@ package Invoker;
 
 import Command.Command;
 
-public class VehicleButton {
+public class VehicleFunctionControl {
 
-    Command theCommand;
+    private Command startCommand;
+    private Command accelerateCommand;
+    private Command brakeCommand;
 
-    public VehicleButton(Command newCommand) {
-
-        this.theCommand = newCommand;
+    public void setStartCommand(Command startCommand) {
+        this.startCommand = startCommand;
     }
-    public void press(){
-        theCommand.execute();
+
+    public void setAccelerateCommand(Command accelerateCommand) {
+        this.accelerateCommand = accelerateCommand;
+    }
+
+    public void setBrakeCommand(Command brakeCommand) {
+        this.brakeCommand = brakeCommand;
+    }
+
+    public void pressStartButton() {
+        startCommand.execute();
+    }
+
+    public void pressAccelerateButton() {
+        accelerateCommand.execute();
+    }
+
+    public void pressBrakeButton() {
+        brakeCommand.execute();
     }
 }

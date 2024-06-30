@@ -1,4 +1,4 @@
-package Agenda;
+package Phone;
 
 public class GenericPhoneNumber implements PhoneNumber {
     private String number;

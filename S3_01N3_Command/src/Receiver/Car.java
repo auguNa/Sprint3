@@ -1,8 +1,6 @@
-package Invoker;
+package Receiver;
 
-import Vehicle.Command;
-
-public class Car implements Command {
+public class Car implements Vehicle {
     private int speed = 0;
 
     public Car() {
@@ -11,7 +9,7 @@ public class Car implements Command {
 
     @Override
     public void start() {
-        System.out.println("The Invoker.Car is ON");
+        System.out.println("The car is ON");
 
     }
 
@@ -25,7 +23,7 @@ public class Car implements Command {
     @Override
     public void brake() {
         speed--;
-        System.out.println("Invoker.Car is decelerating at: " + speed);
+        System.out.println("The car is decelerating at: " + speed);
 
     }
 }

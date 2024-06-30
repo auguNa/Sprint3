@@ -1,18 +1,17 @@
-package Invoker;
+package Command;
 
-import Command.Command;
-import Receiver.Car;
+import Receiver.Vehicle;
 
 public class Brake implements Command {
-    Car car;
+    private Vehicle vehicle;
 
-    public Brake(Car newCar) {
-        car = newCar;
+    public Brake(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 
     @Override
     public void execute() {
-        car.brake();
+        vehicle.brake();
     }
 }
 

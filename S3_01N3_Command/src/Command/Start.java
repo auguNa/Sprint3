@@ -1,18 +1,17 @@
-package Invoker;
+package Command;
 
-import Command.Command;
-import Receiver.Car;
+import Receiver.Vehicle;
 
 public class Start implements Command {
 
-    Car car;
+    private Vehicle vehicle;
 
-    public Start(Car newCar) {
-        car = newCar;
+    public Start(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 
     @Override
     public void execute() {
-        car.start();
+        vehicle.start();
     }
 }

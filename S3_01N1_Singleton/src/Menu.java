@@ -1,21 +1,37 @@
-public class Singleton {
-    private static volatile Singleton instance;
-    private String data;
+import java.util.Scanner;
 
-    public Singleton(String data) {
-        this.data = data;
-    }
+public class Menu {
+    private static Scanner sc = new Scanner(System.in);
+    private static Undo undo = Undo.getInstance();
+    public static void printMenu() {
 
-    public static Singleton getInstance(String data) {
-        if (instance == null) {
-            synchronized (Singleton.class) {
-                if (instance == null) {
-                    instance = new Singleton(data);
-                }
+        int option;
+        do {
+            System.out.println("***UNDO MENU***");
+            System.out.println("1.ADD");
+            System.out.println("2.REMOVE");
+            System.out.println("3.LIST");
+            System.out.println("4.EXIT");
+            System.out.print("Select an option: ");
+
+            option = sc.nextInt();
+            sc.nextLine();
+            switch (option) {
+                case 1:
+                    Undo.add();
+                    break;
+                case 2:
+                    undo.remove();
+                    break;
+                case 3:
+                    undo.list();
+                    break;
+                case 4:
+                    System.out.println("Application ended.. ");
+                    break;
+                default:
+                    System.out.println("Invalid Option");
             }
-        }
-        return instance;
+        } while (option != 0);
     }
 }
-
-

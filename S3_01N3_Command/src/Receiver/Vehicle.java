@@ -1,6 +1,6 @@
 package Receiver;
 
-public interface Command {
+public interface Vehicle {
 
     public void start();
 

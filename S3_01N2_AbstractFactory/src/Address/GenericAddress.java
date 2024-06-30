@@ -1,4 +1,4 @@
-package Agenda;
+package Address;
 
 public class GenericAddress implements Address {
     private String[] details;

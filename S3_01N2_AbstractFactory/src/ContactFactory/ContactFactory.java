@@ -1,5 +1,6 @@
-package Address;
+package ContactFactory;
 
+import Address.Address;
 import Phone.PhoneNumber;
 
 public interface ContactFactory {

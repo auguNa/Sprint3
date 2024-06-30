@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/S3_01N1_Singleton/S3_01N1_Singleton.iml" filepath="$PROJECT_DIR$/S3_01N1_Singleton/S3_01N1_Singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/S3_01N2_AbstractFactory/S3_01N2_AbstractFactory.iml" filepath="$PROJECT_DIR$/S3_01N2_AbstractFactory/S3_01N2_AbstractFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/S3_01N3_Command/S3_01N3_Command.iml" filepath="$PROJECT_DIR$/S3_01N3_Command/S3_01N3_Command.iml" />
       <module fileurl="file://$PROJECT_DIR$/SPRINT_3.iml" filepath="$PROJECT_DIR$/SPRINT_3.iml" />
     </modules>
   </component>

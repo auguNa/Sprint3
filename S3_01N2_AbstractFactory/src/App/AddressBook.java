@@ -1,5 +1,6 @@
-package Address;
+package App;
 
+import Address.Address;
 import ContactFactory.ContactFactory;
 import Phone.PhoneNumber;
 

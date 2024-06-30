@@ -1,7 +1,8 @@
+package App;
+
 import java.util.Scanner;
 
-
-import static Application.*;
+import static App.Application.*;
 
 public class Menu {
     public static void start() {
@@ -28,7 +29,7 @@ public class Menu {
                     deleteContact();
                     break;
                 case 4:
-                    System.out.println("Application ended.. ");
+                    System.out.println("App.Application ended.. ");
                     break;
                 default:
                     System.out.println("Invalid Option");

@@ -1,6 +1,9 @@
-import Agenda.AddressBook;
-import Agenda.ContactFactory;
-import Address.GenericContactFactory;
+package App;
+
+import ContactFactory.ContactFactory;
+import ContactFactory.GenericContactFactory;
+import Phone.GenericPhoneNumber;
+import Phone.PhoneNumber;
 
 import java.util.Scanner;
 
@@ -26,6 +29,7 @@ public class Application {
             System.out.print("Enter phone number: ");
             String phoneNumber = sc.nextLine();
             addressBook.addPhoneNumber(factory, phoneNumber);
+             System.out.println("New contact Created.");
         }
 
         public static void listContacts () {
@@ -33,9 +37,10 @@ public class Application {
         }
 
         public static void deleteContact() {
-            System.out.print("Enter contact number to delete: ");
+            System.out.print("Enter contact id to delete: ");
             int index = sc.nextInt();
             sc.nextLine();
-            addressBook.deleteContact(index - 1); // convert to zero-based index
+            addressBook.deleteContact(index - 1);
+            System.out.println("Contact Deleted");
         }
     }

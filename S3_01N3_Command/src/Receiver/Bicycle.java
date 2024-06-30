@@ -1,8 +1,6 @@
-package Invoker;
+package Receiver;
 
-import Vehicle.Command;
-
-public class Bicycle implements Command {
+public class Bicycle implements Vehicle {
     private int speed = 0;
 
     public Bicycle() {
@@ -11,21 +9,21 @@ public class Bicycle implements Command {
 
     @Override
     public void start() {
-        System.out.println("The Invoker.Bicycle is ON");
+        System.out.println("Bicycle is ON");
 
     }
 
     @Override
     public void accelerate() {
         speed++;
-        System.out.println("The Invoker.Bicycle is accelerating at: " + speed);
+        System.out.println("Bicycle is accelerating at: " + speed);
 
     }
 
     @Override
     public void brake() {
         speed--;
-        System.out.println("The Invoker.Bicycle is decelerating at: " + speed);
+        System.out.println("Bicycle is decelerating at: " + speed);
 
     }
 }
