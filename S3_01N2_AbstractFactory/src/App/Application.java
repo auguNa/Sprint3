@@ -2,8 +2,7 @@ package App;
 
 import ContactFactory.ContactFactory;
 import ContactFactory.GenericContactFactory;
-import Phone.GenericPhoneNumber;
-import Phone.PhoneNumber;
+
 
 import java.util.Scanner;
 

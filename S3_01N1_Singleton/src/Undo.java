@@ -5,7 +5,7 @@ public final class Undo {
     private static volatile Undo instance;
     private static Scanner sc = new Scanner(System.in);
     private static ArrayList<String> undoCommandList = new ArrayList<>();
-    
+
     private Undo() {
     }
 
@@ -13,7 +13,6 @@ public final class Undo {
         Undo result = instance;
         if (instance == null) {
             synchronized (Undo.class) {
-                result = instance;
                 if (instance == null) {
                     instance = new Undo();
                 }
