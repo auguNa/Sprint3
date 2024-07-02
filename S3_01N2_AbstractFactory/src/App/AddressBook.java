@@ -35,5 +35,8 @@ public class AddressBook {
             phoneNumbers.get(i).display();
         }
     }
+    public boolean isEmpty() {
+        return addresses.isEmpty() && phoneNumbers.isEmpty();
+    }
 }
 
