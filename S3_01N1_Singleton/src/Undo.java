@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public final class Undo {
     private static volatile Undo instance;
-    private static Scanner sc = new Scanner(System.in);
     private static ArrayList<String> undoCommandList = new ArrayList<>();
 
     private Undo() {
@@ -22,10 +21,12 @@ public final class Undo {
     }
 
     public static void add() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Add data: ");
         String data = sc.nextLine();
         undoCommandList.add(data);
         System.out.println("Data added.");
+
     }
 
     public static void remove() {
@@ -39,9 +40,10 @@ public final class Undo {
 
     public static void list() {
         if (!undoCommandList.isEmpty()) {
-            System.out.println("Undo Command List:");
-            for (int i = 0; i < undoCommandList.size(); i++) {
-                System.out.println((i + 1) + ". " + undoCommandList.get(i));
+            int index = 1;
+            for (String command : undoCommandList) {
+                System.out.println(index + ". " + command);
+                index++;
             }
         } else {
             System.out.println("No data to list.");

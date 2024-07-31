@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Menu {
     private static Scanner sc = new Scanner(System.in);
     private static Undo undo = Undo.getInstance();
-    public static void printMenu() {
+    private static int option;
 
-        int option;
+    public static void printMenu() {
         do {
             System.out.println("***UNDO MENU***");
             System.out.println("1.ADD");
@@ -13,24 +13,27 @@ public class Menu {
             System.out.println("3.LIST");
             System.out.println("4.EXIT");
             System.out.print("Select an option: ");
-
-            option = sc.nextInt();
-            sc.nextLine();
-            switch (option) {
-                case 1:
-                    Undo.add();
-                    break;
-                case 2:
-                    undo.remove();
-                    break;
-                case 3:
-                    undo.list();
-                    break;
-                case 4:
-                    System.out.println("Application ended.. ");
-                    break;
-                default:
-                    System.out.println("Invalid Option");
+            try {
+                option = sc.nextInt();
+                sc.nextLine();
+                switch (option) {
+                    case 1:
+                        Undo.add();
+                        break;
+                    case 2:
+                        undo.remove();
+                        break;
+                    case 3:
+                        undo.list();
+                        break;
+                    case 4:
+                        System.out.println("Application ended.. ");
+                        break;
+                    default:
+                        System.out.println("Invalid Option");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("ERROR: " + e.getMessage() + " - Please enter a integer");
             }
         } while (option != 0);
     }
