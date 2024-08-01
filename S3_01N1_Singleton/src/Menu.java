@@ -18,7 +18,7 @@ public class Menu {
                 sc.nextLine();
                 switch (option) {
                     case 1:
-                        Undo.add();
+                        undo.add();
                         break;
                     case 2:
                         undo.remove();

@@ -20,7 +20,7 @@ public final class Undo {
         return instance;
     }
 
-    public static void add() {
+    public void add() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Add data: ");
         String data = sc.nextLine();
@@ -29,7 +29,7 @@ public final class Undo {
 
     }
 
-    public static void remove() {
+    public void remove() {
         if (!undoCommandList.isEmpty()) {
             undoCommandList.remove(undoCommandList.size() - 1);
             System.out.println("Last data removed.");
@@ -38,7 +38,7 @@ public final class Undo {
         }
     }
 
-    public static void list() {
+    public void list() {
         if (!undoCommandList.isEmpty()) {
             int index = 1;
             for (String command : undoCommandList) {
